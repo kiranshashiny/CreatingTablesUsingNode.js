@@ -130,5 +130,54 @@ $(document).ready(function(){
     </body>
   </html>
   
+  ```
+  
+  
+  Another program
   
   ```
+  
+  $ cat yn.html
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $('#table_id td.y_n').each(function(){
+        if ($(this).text() == 'Sell') {
+            $(this).css('background-color','#f00');
+        }
+    });
+
+    let data = ["Ram", "Shyam", "Sita", "Gita"];
+     
+    let list = document.getElementById("myList");
+     
+    data.forEach((item) => {
+      let li = document.createElement("li");
+      li.innerText = item;
+      list.appendChild(li);
+    });
+});
+
+</script>
+
+</head>
+<body>
+<ul id="myList"></ul>
+
+<table id="table_id">
+ <tr><th>Zacks Ranking on Stocks</th><th>Y/N?</th></tr>
+ <tr><th>Stock Name</th><th> 4/1/2023</th> <th> 4/2/2023</th></tr>
+ <tr><td>MSFT</td><td class="y_n">Buy</td> <td class="y_n">Sell</td></tr>
+ <tr><td>AA</td>  <td class="y_n">Sell</td></tr>
+ <tr><td>WIP</td> <td class="y_n">Buy</td></tr>
+ <tr><td>UAL</td> <td class="y_n">Buy</td></tr>
+</table>
+
+
+</body>
+</html>
+
+```
